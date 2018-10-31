@@ -1,0 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const messages = require("./messages");
+exports.response = Object.assign({}, messages);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiL2hvbWUvYXBwaW52ZW50aXZyaC0wNTgvQXNoaXNoLXdvcmsvcmNjL2FwaS9kYXRhL3Jlc3BvbnNlL2luZGV4LnRzIiwic291cmNlcyI6WyIvaG9tZS9hcHBpbnZlbnRpdnJoLTA1OC9Bc2hpc2gtd29yay9yY2MvYXBpL2RhdGEvcmVzcG9uc2UvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSx1Q0FBdUM7QUFFMUIsUUFBQSxRQUFRLHFCQUNkLFFBQVEsRUFDYiIsInNvdXJjZXNDb250ZW50IjpbIlxuaW1wb3J0ICogYXMgbWVzc2FnZXMgZnJvbSBcIi4vbWVzc2FnZXNcIjtcblxuZXhwb3J0IGNvbnN0IHJlc3BvbnNlID0ge1xuICAgIC4uLm1lc3NhZ2VzXG59O1xuIl19

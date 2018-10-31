@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const passport_1 = require("passport");
+const jwt = require("passport-jwt");
+const environments_1 = require("../../environments");
+passport_1.use('user-jwt', new jwt.Strategy({
+    jwtFromRequest: jwt.ExtractJwt.fromAuthHeaderAsBearerToken(),
+    secretOrKey: environments_1.config.JWT_SECRET
+}, function (jwt_payload, done) {
+    //
+}));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiL2hvbWUvYXBwaW52ZW50aXZyaC0wNTgvQXNoaXNoLXdvcmsvcmNjL2FwaS9hdXRoL3VzZXIvand0LnRzIiwic291cmNlcyI6WyIvaG9tZS9hcHBpbnZlbnRpdnJoLTA1OC9Bc2hpc2gtd29yay9yY2MvYXBpL2F1dGgvdXNlci9qd3QudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSx1Q0FBK0I7QUFDL0Isb0NBQW9DO0FBQ3BDLHFEQUE0QztBQUc1QyxjQUFHLENBQUMsVUFBVSxFQUFFLElBQUksR0FBRyxDQUFDLFFBQVEsQ0FBQztJQUM3QixjQUFjLEVBQUUsR0FBRyxDQUFDLFVBQVUsQ0FBQywyQkFBMkIsRUFBRTtJQUM1RCxXQUFXLEVBQUUscUJBQU0sQ0FBQyxVQUFVO0NBQ2pDLEVBQUUsVUFBUyxXQUFXLEVBQUUsSUFBSTtJQUN6QixFQUFFO0FBQ04sQ0FBQyxDQUFDLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIlxuaW1wb3J0IHsgdXNlIH0gZnJvbSAncGFzc3BvcnQnO1xuaW1wb3J0ICogYXMgand0IGZyb20gJ3Bhc3Nwb3J0LWp3dCc7XG5pbXBvcnQgeyBjb25maWcgfSBmcm9tICcuLi8uLi9lbnZpcm9ubWVudHMnO1xuXG5cbnVzZSgndXNlci1qd3QnLCBuZXcgand0LlN0cmF0ZWd5KHtcbiAgICBqd3RGcm9tUmVxdWVzdDogand0LkV4dHJhY3RKd3QuZnJvbUF1dGhIZWFkZXJBc0JlYXJlclRva2VuKCksXG4gICAgc2VjcmV0T3JLZXk6IGNvbmZpZy5KV1RfU0VDUkVUXG59LCBmdW5jdGlvbihqd3RfcGF5bG9hZCwgZG9uZSkge1xuICAgIC8vXG59KSk7XG4iXX0=

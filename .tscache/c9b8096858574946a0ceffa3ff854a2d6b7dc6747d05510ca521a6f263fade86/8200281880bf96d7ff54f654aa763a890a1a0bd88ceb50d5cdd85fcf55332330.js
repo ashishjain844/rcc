@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const passport_1 = require("passport");
+const local = require("passport-local");
+const db_1 = require("../../db");
+passport_1.use('admin-local', new local.Strategy({
+    usernameField: 'username',
+    passwordField: 'password'
+}, function (username, password, done) {
+    console.log(username, password);
+    db_1.admin.login({ username, password })
+        .then(function (result) {
+        console.log(result);
+        done(null, result);
+    })
+        .catch(done);
+}));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiL2hvbWUvYXBwaW52ZW50aXZyaC0wNTgvQXNoaXNoLXdvcmsvcmNjL2FwaS9hdXRoL2FkbWluL2xvY2FsLnRzIiwic291cmNlcyI6WyIvaG9tZS9hcHBpbnZlbnRpdnJoLTA1OC9Bc2hpc2gtd29yay9yY2MvYXBpL2F1dGgvYWRtaW4vbG9jYWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSx1Q0FBK0I7QUFDL0Isd0NBQXdDO0FBQ3hDLGlDQUFpQztBQUVqQyxjQUFHLENBQUMsYUFBYSxFQUFFLElBQUksS0FBSyxDQUFDLFFBQVEsQ0FBQztJQUNsQyxhQUFhLEVBQUUsVUFBVTtJQUN6QixhQUFhLEVBQUUsVUFBVTtDQUM1QixFQUFFLFVBQVMsUUFBZ0IsRUFBRSxRQUFnQixFQUFFLElBQUk7SUFDaEQsT0FBTyxDQUFDLEdBQUcsQ0FBQyxRQUFRLEVBQUUsUUFBUSxDQUFDLENBQUM7SUFDaEMsVUFBSyxDQUFDLEtBQUssQ0FBQyxFQUFDLFFBQVEsRUFBRSxRQUFRLEVBQUMsQ0FBQztTQUNoQyxJQUFJLENBQUMsVUFBUyxNQUFNO1FBQ2pCLE9BQU8sQ0FBQyxHQUFHLENBQUMsTUFBTSxDQUFDLENBQUM7UUFDcEIsSUFBSSxDQUFDLElBQUksRUFBRSxNQUFNLENBQUMsQ0FBQztJQUN2QixDQUFDLENBQUM7U0FDRCxLQUFLLENBQUMsSUFBSSxDQUFDLENBQUM7QUFDakIsQ0FBQyxDQUFDLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIlxuaW1wb3J0IHsgdXNlIH0gZnJvbSAncGFzc3BvcnQnO1xuaW1wb3J0ICogYXMgbG9jYWwgZnJvbSAncGFzc3BvcnQtbG9jYWwnO1xuaW1wb3J0IHsgYWRtaW4gfSBmcm9tICcuLi8uLi9kYic7XG5cbnVzZSgnYWRtaW4tbG9jYWwnLCBuZXcgbG9jYWwuU3RyYXRlZ3koe1xuICAgIHVzZXJuYW1lRmllbGQ6ICd1c2VybmFtZScsXG4gICAgcGFzc3dvcmRGaWVsZDogJ3Bhc3N3b3JkJ1xufSwgZnVuY3Rpb24odXNlcm5hbWU6IHN0cmluZywgcGFzc3dvcmQ6IHN0cmluZywgZG9uZSkge1xuICAgIGNvbnNvbGUubG9nKHVzZXJuYW1lLCBwYXNzd29yZCk7XG4gICAgYWRtaW4ubG9naW4oe3VzZXJuYW1lLCBwYXNzd29yZH0pXG4gICAgLnRoZW4oZnVuY3Rpb24ocmVzdWx0KSB7XG4gICAgICAgIGNvbnNvbGUubG9nKHJlc3VsdCk7XG4gICAgICAgIGRvbmUobnVsbCwgcmVzdWx0KTtcbiAgICB9KVxuICAgIC5jYXRjaChkb25lKTtcbn0pKTtcblxuIl19

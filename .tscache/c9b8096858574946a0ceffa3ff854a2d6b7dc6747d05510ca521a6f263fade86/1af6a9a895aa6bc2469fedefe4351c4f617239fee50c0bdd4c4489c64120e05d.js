@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const passport_1 = require("passport");
+const local = require("passport-local");
+const db_1 = require("../../db");
+passport_1.use('user-local', new local.Strategy({
+    usernameField: 'username',
+    passwordField: 'password'
+}, function (username, password, done) {
+    db_1.user.login({ username, password })
+        .then(function (result) {
+        done(null, result);
+    })
+        .catch(done);
+}));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiL2hvbWUvYXBwaW52ZW50aXZyaC0wNTgvQXNoaXNoLXdvcmsvcmNjL2FwaS9hdXRoL3VzZXIvbG9jYWwudHMiLCJzb3VyY2VzIjpbIi9ob21lL2FwcGludmVudGl2cmgtMDU4L0FzaGlzaC13b3JrL3JjYy9hcGkvYXV0aC91c2VyL2xvY2FsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsdUNBQStCO0FBQy9CLHdDQUF3QztBQUN4QyxpQ0FBZ0M7QUFFaEMsY0FBRyxDQUFDLFlBQVksRUFBRSxJQUFJLEtBQUssQ0FBQyxRQUFRLENBQUM7SUFDakMsYUFBYSxFQUFFLFVBQVU7SUFDekIsYUFBYSxFQUFFLFVBQVU7Q0FDNUIsRUFBRSxVQUFTLFFBQWdCLEVBQUUsUUFBZ0IsRUFBRSxJQUFJO0lBQ2hELFNBQUksQ0FBQyxLQUFLLENBQUMsRUFBQyxRQUFRLEVBQUUsUUFBUSxFQUFDLENBQUM7U0FDL0IsSUFBSSxDQUFDLFVBQVMsTUFBTTtRQUNqQixJQUFJLENBQUMsSUFBSSxFQUFFLE1BQU0sQ0FBQyxDQUFDO0lBQ3ZCLENBQUMsQ0FBQztTQUNELEtBQUssQ0FBQyxJQUFJLENBQUMsQ0FBQztBQUNqQixDQUFDLENBQUMsQ0FBQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiXG5pbXBvcnQgeyB1c2UgfSBmcm9tICdwYXNzcG9ydCc7XG5pbXBvcnQgKiBhcyBsb2NhbCBmcm9tICdwYXNzcG9ydC1sb2NhbCc7XG5pbXBvcnQgeyB1c2VyIH0gZnJvbSAnLi4vLi4vZGInO1xuXG51c2UoJ3VzZXItbG9jYWwnLCBuZXcgbG9jYWwuU3RyYXRlZ3koe1xuICAgIHVzZXJuYW1lRmllbGQ6ICd1c2VybmFtZScsXG4gICAgcGFzc3dvcmRGaWVsZDogJ3Bhc3N3b3JkJ1xufSwgZnVuY3Rpb24odXNlcm5hbWU6IHN0cmluZywgcGFzc3dvcmQ6IHN0cmluZywgZG9uZSkge1xuICAgIHVzZXIubG9naW4oe3VzZXJuYW1lLCBwYXNzd29yZH0pXG4gICAgLnRoZW4oZnVuY3Rpb24ocmVzdWx0KSB7XG4gICAgICAgIGRvbmUobnVsbCwgcmVzdWx0KTtcbiAgICB9KVxuICAgIC5jYXRjaChkb25lKTtcbn0pKTtcblxuIl19

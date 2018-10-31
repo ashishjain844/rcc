@@ -1,0 +1,19 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const register_1 = require("./register");
+const login_1 = require("./login");
+const fetch_1 = require("./fetch");
+const update_1 = require("./update");
+const forgot_1 = require("./forgot");
+const validate_token_1 = require("./validate-token");
+const reset_password_1 = require("./reset-password");
+exports.admin = {
+    register: register_1.register,
+    fetch: fetch_1.fetch,
+    update: update_1.update,
+    login: login_1.login,
+    forgot: forgot_1.forgot,
+    validateToken: validate_token_1.validateToken,
+    resetPassword: reset_password_1.resetPassword
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiL2hvbWUvYXBwaW52ZW50aXZyaC0wNTgvQXNoaXNoLXdvcmsvcmNjL2FwaS9jb250cm9sbGVycy9hZG1pbi9pbmRleC50cyIsInNvdXJjZXMiOlsiL2hvbWUvYXBwaW52ZW50aXZyaC0wNTgvQXNoaXNoLXdvcmsvcmNjL2FwaS9jb250cm9sbGVycy9hZG1pbi9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLHlDQUFzQztBQUN0QyxtQ0FBZ0M7QUFDaEMsbUNBQWdDO0FBQ2hDLHFDQUFrQztBQUNsQyxxQ0FBa0M7QUFDbEMscURBQWlEO0FBQ2pELHFEQUFpRDtBQUVwQyxRQUFBLEtBQUssR0FBRztJQUNqQixRQUFRLEVBQVIsbUJBQVE7SUFDUixLQUFLLEVBQUwsYUFBSztJQUNMLE1BQU0sRUFBTixlQUFNO0lBQ04sS0FBSyxFQUFMLGFBQUs7SUFDTCxNQUFNLEVBQU4sZUFBTTtJQUNOLGFBQWEsRUFBYiw4QkFBYTtJQUNiLGFBQWEsRUFBYiw4QkFBYTtDQUNoQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiXG5pbXBvcnQgeyByZWdpc3RlciB9IGZyb20gJy4vcmVnaXN0ZXInO1xuaW1wb3J0IHsgbG9naW4gfSBmcm9tICcuL2xvZ2luJztcbmltcG9ydCB7IGZldGNoIH0gZnJvbSAnLi9mZXRjaCc7XG5pbXBvcnQgeyB1cGRhdGUgfSBmcm9tICcuL3VwZGF0ZSc7XG5pbXBvcnQgeyBmb3Jnb3QgfSBmcm9tICcuL2ZvcmdvdCc7XG5pbXBvcnQgeyB2YWxpZGF0ZVRva2VuIH0gZnJvbSAnLi92YWxpZGF0ZS10b2tlbic7XG5pbXBvcnQgeyByZXNldFBhc3N3b3JkIH0gZnJvbSAnLi9yZXNldC1wYXNzd29yZCc7XG5cbmV4cG9ydCBjb25zdCBhZG1pbiA9IHtcbiAgICByZWdpc3RlcixcbiAgICBmZXRjaCxcbiAgICB1cGRhdGXigIvigIssXG4gICAgbG9naW4sXG4gICAgZm9yZ290LFxuICAgIHZhbGlkYXRlVG9rZW4sXG4gICAgcmVzZXRQYXNzd29yZFxufTtcbiJdfQ==
